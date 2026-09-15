@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+    
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Chai Chat — a community making room for human connection, one conversation at a time."> <!-- summary text for SE-->
+    <title>Chai Chat</title>
+    <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&display=swap">
+    <script>
+        try {
+            var t = localStorage.getItem('chai-chat-theme');
+            if (t !== 'light' && t !== 'dark') {t = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';}
+            document.documentElement.dataset.theme = t;
+        } catch (e) { document.documentElement.dataset.theme = 'dark'; }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+<div class="site-shell"> <!--everything visible-->
+    <header class="header"> <!--header band-->
+        <div class="container nav">
+            <a class="brand" href="index.html" aria-label="Chai Chat home">
+                <span class="brand-logo" id="brand-logo"></span>
+                <span class="brand-name">Chai Chat</span>
+            </a>
+            
+            <nav class="nav-links" aria-label="Primary">
+                <a href="index.html">Home</a>
+                <a href="about.html">Chai Chat?</a>
+                <a href="crew.html">The Crew</a>
+                <a href="construction.html">Our Friends</a> <!--TODO: href="friends.html"-->
+                <a class="nav-cta" href="get-involved.html">Get Involved</a>
+            </nav>
+            
+            <button class="menu-btn" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">☰</button>
+            <button class="theme-toggle" type="button" aria-label="Switch to bright mode" title="Switch to bright mode" data-theme-toggle>
+                <span class="theme-icon" aria-hidden="true">☾</span>
+            </button>
+        </div>
+        
+        <div id="mobile-menu" class="mobile-menu">
+            <div class="container">
+                <a href="index.html">Home</a>
+                <a href="about.html">Chai Chat?</a>
+                <a href="crew.html">The Crew</a>
+                <a href="construction.html">Our Friends</a> <!--TODO: href="friends.html"-->
+                <a class="nav-cta" href="get-involved.html">Get Involved</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-copy fade-in">
+                <!--<div class="eyebrow">Montreal · Every Friday</div>-->
+                <h1>Every person on the street has a name and a story.</h1>
+                <h1><span>We’re here to learn both.</span></h1>
+                <!--<p>Chai Chat is a grassroots community built around a simple act: walking together, saying hello, and making time for people who are too often passed by.</p>-->
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="get-involved.html">Join &amp; Experience</a> 
+                    <a class="btn btn-secondary" href="construction.html">Meet Our Friends</a> <!--TODO: href="friends.html"-->
+                </div>
+            </div>
+
+            <div class="hero-map" aria-label="Montreal map image">
+                <img src="assets/mtl_map.jpg" alt="Map of Montreal"
+                    onerror="this.style.display='none'; this.nextElementSibling.classList.remove('is-hidden')">
+                <div class="map-fallback is-hidden"></div>
+            </div>
+        </div>
+        
+        <div class="container walk-strip">
+            <div class="info-card">
+                <div class="info-label">Next walk</div>
+                <div class="info-value" data-next-walk>Calculating…</div>
+            </div>
+            <div class="info-card gold">
+                <div class="info-label">Meeting location</div>
+                <div class="info-value">Newman Centre<br><span style="font-family:var(--sans);font-size:15px;font-weight:500">3484 Rue Peel · 6:00 PM</span></div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section"><div class="container"><div class="intro-panel"><div><div class="eyebrow">Why Chai Chat</div><h2>Close the distance.</h2></div><div><p>We want to break down the social wall between people who live on the street and people who don’t. We believe the first step is not a donation. It is a greeting, a conversation, and the willingness to stay for a little while.</p><a class="kicker-link" href="about.html">Learn what we do →</a></div></div></div></section>
+    <section class="section" style="padding-top:20px"><div class="container"><div class="section-heading"><div><div class="eyebrow">Come closer</div><h2>There are three ways in.</h2></div><p>Start with whichever feels possible today. The point is to move from knowing about people to knowing people.</p></div><div class="cards"><a class="card" href="about.html"><div class="mini-icon">✦</div><h3>What we do</h3><p>Why we walk, how our weekly Chai Chats work, and what we mean when we say “people from the street.”</p></a><a class="card" href="crew.html"><div class="mini-icon">♡</div><h3>Who we are</h3><p>Meet the founders, organizers, active participants, and every person who has helped make a conversation happen.</p></a><a class="card" href="friends.html"><div class="mini-icon">☻</div><h3>Our friends</h3><p>Read small, respectful glimpses of the people we have met, without exposing the personal information they have entrusted to us.</p></a></div></div></section>
+    <section class="band"><div class="container"><div class="eyebrow">A little invitation</div><h2>Bring your time. Bring your curiosity.</h2><p>You do not need a special role to join us. You just need to show up, walk with us, and be willing to say hello.</p><a class="btn btn-secondary" style="margin-top:18px;color:var(--white);border-color:var(--gold-400)" href="get-involved.html">Find your way in →</a></div></section>
+    </main>
+
+    <footer class="footer"><div class="container footer-grid"><div><a class="brand" href="index.html"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none"><path d="M5 8h13v6.5A4.5 4.5 0 0 1 13.5 19h-2A4.5 4.5 0 0 1 7 14.5V8Z" stroke="currentColor" stroke-width="1.4"/><path d="M18 10h1a2.5 2.5 0 0 1 0 5h-1M4 7h15" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></span><span class="brand-name">Chai Chat</span></a><div class="quote">“Set no limits to love; Know no enemies to fight.”</div><div class="socials"><a href="#">◉ &nbsp;join our WhatsApp group chat</a><a href="#">◎ &nbsp;chai.chat.mtl</a></div></div><div><h4>Stay close</h4><p style="color:#dbe3eb">Interested in joining us or getting more info? Drop your email.</p><form class="subscribe-form" data-subscribe><input type="email" placeholder="you@example.com" aria-label="Email address" required><button class="btn btn-secondary" type="submit" style="color:var(--white);border-color:var(--gold-400)">Join</button></form><div class="form-message"></div></div><div><h4>Explore</h4><div class="footer-links"><a href="about.html">Chai Chat?</a><a href="crew.html">The Crew</a><a href="friends.html">Our Friends</a><a href="get-involved.html">Get Involved</a></div></div><div><h4>Reach us</h4><div class="reach">416 428 9988<br><a href="mailto:chai.chat.mtl@gmail.com">chai.chat.mtl@gmail.com</a><br><br>Newman Centre<br>3484 Rue Peel, Montreal, QC<br>Every Friday · 6:00 PM</div></div></div><div class="container footer-bottom"><span>© 2026 Chai Chat</span><span>A grassroots community in Montreal</span></div>
+    </footer>
+
+</div>
+</body>
+
+</html>
