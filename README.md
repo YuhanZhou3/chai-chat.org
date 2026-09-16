@@ -1,4 +1,14 @@
-# Chai Chat — static website
+# Chai Chat Website
+Chai Chat's ultimate goal: get people to take action — to greet and talk with people on the streets (our friends).
+
+By: closing the social and emotional gap between housed people and people living on the street.
+
+Through:
+
+1. Joining a walk and experiencing it firsthand, or
+2. Reading the stories of people from the street to feel less distant from them
+
+These two paths are the core purpose of the website.
 
 ## Pages
 - `index.html` — Home
