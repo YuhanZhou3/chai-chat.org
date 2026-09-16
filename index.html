@@ -18,43 +18,13 @@
             document.documentElement.dataset.theme = t;
         } catch (e) { document.documentElement.dataset.theme = 'dark'; }
     </script>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script defer src="/js/script.js"></script>
 </head>
 
 <body>
 <div class="site-shell"> <!--everything visible-->
-    <header class="header"> <!--header band-->
-        <div class="container nav">
-            <a class="brand" href="index.html" aria-label="Chai Chat home">
-                <span class="brand-logo" id="brand-logo"></span>
-                <span class="brand-name">Chai Chat</span>
-            </a>
-            
-            <nav class="nav-links" aria-label="Primary">
-                <a href="index.html">Home</a>
-                <a href="about.html">Chai Chat?</a>
-                <a href="crew.html">The Crew</a>
-                <a href="construction.html">Our Friends</a> <!--TODO: href="friends.html"-->
-                <a class="nav-cta" href="get-involved.html">Get Involved</a>
-            </nav>
-            
-            <button class="menu-btn" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">☰</button>
-            <button class="theme-toggle" type="button" aria-label="Switch to bright mode" title="Switch to bright mode" data-theme-toggle>
-                <span class="theme-icon" aria-hidden="true">☾</span>
-            </button>
-        </div>
-        
-        <div id="mobile-menu" class="mobile-menu">
-            <div class="container">
-                <a href="index.html">Home</a>
-                <a href="about.html">Chai Chat?</a>
-                <a href="crew.html">The Crew</a>
-                <a href="construction.html">Our Friends</a> <!--TODO: href="friends.html"-->
-                <a class="nav-cta" href="get-involved.html">Get Involved</a>
-            </div>
-        </div>
-    </header>
+    <div id="header"></div>
 
     <main>
     <section class="hero">
@@ -151,58 +121,11 @@
     </section>
     </main>
 
-    <footer class="footer">
-        <div class="container footer-grid">
-            <div>
-                <a class="brand" href="index.html">
-                    <span class="brand-mark">
-                        <svg viewBox="0 0 24 24" fill="none">
-                            <path d="M5 8h13v6.5A4.5 4.5 0 0 1 13.5 19h-2A4.5 4.5 0 0 1 7 14.5V8Z" stroke="currentColor" stroke-width="1.4"/>
-                            <path d="M18 10h1a2.5 2.5 0 0 1 0 5h-1M4 7h15" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
-                        </svg>
-                    </span>
-                    <span class="brand-name">Chai Chat</span>
-                </a>
-                <div class="quote">“Set no limits to love; Know no enemies to fight.”</div>
-                <div class="socials"> <!--TODO today-->
-                    <a href="https://chat.whatsapp.com/D7ijkmDq2VA20nOwbcTSlF?s=sh&p=i&mlu=4&ilr=4">◉ &nbsp;join our WhatsApp group chat</a>
-                    <a href="https://www.instagram.com/chai.chat.mtl/">◎ &nbsp;chai.chat.mtl</a>
-                </div>
-            </div>
-            <div>
-                <h4>Stay close</h4>
-                <p style="color:#dbe3eb">Interested in joining us or getting more info? Drop your email.</p>
-                <form class="subscribe-form" data-subscribe>
-                    <input type="email" placeholder="you@example.com" aria-label="Email address" required>
-                    <button class="btn btn-secondary" type="submit" style="color:var(--white);border-color:var(--gold-400)">Join</button>
-                </form>
-                <div class="form-message"></div>
-            </div>
-            <div>
-                <h4>Explore</h4>
-                <div class="footer-links">
-                    <a href="about.html">Chai Chat?</a>
-                    <a href="crew.html">The Crew</a>
-                    <a href="contruction.html">Our Friends</a> <!--href="friends.html" | TODO-->
-                    <a href="get-involved.html">Get Involved</a>
-                </div>
-            </div>
-            <div>
-                <h4>Reach us</h4>
-                <div class="reach">416 428 9988<br>
-                    <a href="mailto:chai.chat.mtl@gmail.com">chai.chat.mtl@gmail.com</a><br><br>
-                    Newman Centre<br>3484 Rue Peel, Montreal, QC<br>
-                    Every Friday · 6:00 PM
-                </div>
-            </div>
-        </div>
-        <div class="container footer-bottom">
-            <span>© 2026 Chai Chat</span>
-            <span>A grassroots community in Montreal</span>
-        </div>
-    </footer>
+    <div id="footer"></div>
 
 </div>
+
+<script src="/js/partials-loader.js"></script>
 </body>
 
 </html>
