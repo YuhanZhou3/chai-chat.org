@@ -2,8 +2,8 @@
 
 ## Pages
 - `index.html` — Home
-- `about.html` — Chai Chat?
-- `crew.html` — The Crew
+- `about.html` — Chai Chat? (About Us)
+- `crew.html` — The Crew (Who Are We)
 - `friends.html` — Our Friends
 - `get-involved.html` — Get Involved
 
