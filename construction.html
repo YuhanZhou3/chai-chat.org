@@ -3,10 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Under Construction</title>
+<title>Chai Chat - Page Under Construction</title>
+<link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Text:wght@700;900&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<!--theme script-->
+<script>
+    try {
+        var t = localStorage.getItem('chai-chat-theme');
+        if (t !== 'light' && t !== 'dark') {t = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';}
+        document.documentElement.dataset.theme = t;
+    } catch (e) { document.documentElement.dataset.theme = 'dark'; }
+</script>
+<link rel="stylesheet" href="/css/styles.css"> <!--site style sheet for header and footer-->
+
 <style>
   :root{
     --asphalt: #1c1b1a;
@@ -28,13 +39,14 @@
     position: relative;
     min-height: 100svh;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column; 
+    align-items: stretch;
+    justify-content: flex-start;
     overflow-x: hidden;
     font-family: 'IBM Plex Mono', monospace;
     color: var(--barrier-white);
     background: var(--asphalt);
-    padding: 6vh 5vw;
+    padding: 0;
   }
 
   /* Blurred, darkened copy of the SAME photo, filling the whole page
@@ -79,6 +91,10 @@
     text-align: center;
     max-width: 720px;
     width: 100%;
+    flex: 1;
+    justify-content: center; 
+    margin: 0 auto;
+    padding: 6vh 5vw;
   }
 
   .eyebrow {
@@ -127,55 +143,19 @@
     max-width: min(88vw, 560px);
   }
 
-  .frame img {
-    display: block;
-    width: 100%;
-    height: auto;
-    border-radius: 1px;
-    filter: saturate(1.05) contrast(1.03);
-  }
-
-  h1 {
-    font-family: 'Big Shoulders Stencil Text', sans-serif;
-    font-weight: 900;
-    font-size: clamp(2.6rem, 8vw, 4.6rem);
-    line-height: 0.95;
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
-    color: var(--caution-yellow);
-    margin: 0 0 14px;
-    text-shadow: 3px 3px 0 rgba(0,0,0,0.55);
-  }
-
-  h1 .dots {
-    display: inline-block;
-    animation: blink 1.6s steps(1) infinite;
-  }
-
-  @keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.25; }
-  }
-
-  p.sub {
-    margin: 0;
-    font-size: 0.92rem;
-    color: rgba(242, 237, 228, 0.82);
-    letter-spacing: 0.01em;
-    max-width: 46ch;
-  }
-
-  p.sub strong {
-    color: var(--barrier-white);
-    font-weight: 600;
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .beacon, h1 .dots { animation: none; }
-  }
+  .frame img {display: block;width: 100%;height: auto;border-radius: 1px;filter: saturate(1.05) contrast(1.03);}
+  h1 {font-family: 'Big Shoulders Stencil Text', sans-serif;font-weight: 900;font-size: clamp(2.6rem, 8vw, 4.6rem);line-height: 0.95;letter-spacing: 0.02em;text-transform: uppercase;color: var(--caution-yellow);margin: 0 0 14px;text-shadow: 3px 3px 0 rgba(0,0,0,0.55);}
+  h1 .dots {display: inline-block;animation: blink 1.6s steps(1) infinite;}
+  @keyframes blink {0%, 100% { opacity: 1; }50% { opacity: 0.25; }}
+  p.sub {margin: 0;font-size: 0.92rem;color: rgba(242, 237, 228, 0.82);letter-spacing: 0.01em;max-width: 46ch;}
+  p.sub strong {color: var(--barrier-white); font-weight: 600;}
+  @media (prefers-reduced-motion: reduce) {.beacon, h1 .dots { animation: none; }}
 </style>
+<script defer src="/js/script.js"></script>
 </head>
+
 <body>
+  <div id="header"></div>
 
   <div class="stage">
     <p class="eyebrow"><span class="beacon"></span> Site status: active work zone</p>
@@ -189,6 +169,8 @@
     <h1>Under Construction<span class="dots">...</span></h1>
     <p class="sub">We're paving the streets for something new. <strong>So you can truly get to know the people living within them! </strong></p>
   </div>
+  <div id="footer"></div>
+<script src="/js/partials-loader.js"></script>
 
 </body>
 </html>
