@@ -8,6 +8,7 @@
 - `get-involved.html` — Get Involved
 
 ## TODO
+- Figure out how to use live server extension & debug render problem
 - Replace the social placeholders with real WhatsApp/Instagram links.
 - Connect the email forms to an email provider or serverless endpoint.
 - Fix the logo and mode toggle button on different pages
