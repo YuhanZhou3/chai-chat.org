@@ -8,6 +8,7 @@
 - `get-involved.html` — Get Involved
 
 ## TODO
+- Wrap each todo into a small project, and write descriptions
 - Replace the social placeholders with real WhatsApp/Instagram links.
 - Connect the email forms to an email provider or serverless endpoint.
 - Fix the logo and mode toggle button on different pages
