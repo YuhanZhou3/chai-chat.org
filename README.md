@@ -11,7 +11,7 @@
 - Wrap each todo into a small project, and write descriptions
 - Replace the social placeholders with real WhatsApp/Instagram links.
 - Connect the email forms to an email provider or serverless endpoint.
-- Fix the logo and mode toggle button on different pages
+- Fix the logo and mode toggle button on different pages - copy paste for now, use static site generator / code one in python
 - Get the header in construction page
 - Check the text on each page
 - Reroute email to info@chai-chat.org
